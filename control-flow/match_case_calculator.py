@@ -6,17 +6,17 @@ match operation :
 
     case "+":
         add= num1 +num2
-        print(add)
+        print(f"The result is {add}")
     case "-":
         sub= num1-num2
-        print(sub)
+        print(f"The result is {sub}")
     
     case "*":
         mult=num1 * num2
-        print(mult)
+        print(f"The result is {mult}")
     case "/":
         if num2 == 0:
             print("Cannot divide by zero.")
         else:
             div=num1/num2
-            print(div)
+            print(f"The result is {div}")
