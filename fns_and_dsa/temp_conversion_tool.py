@@ -4,10 +4,12 @@
 FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9  # Conversion factor from Fahrenheit to Celsius
 CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5   # Conversion factor from Celsius to Fahrenheit
 
-# Check if the global conversion factors are defined correctly
+# Function to check if global conversion factors are defined correctly
 def check_global_conversion_factors():
-    assert FAHRENHEIT_TO_CELSIUS_FACTOR == 5 / 9, "FAHRENHEIT_TO_CELSIUS_FACTOR is not defined correctly."
-    assert CELSIUS_TO_FAHRENHEIT_FACTOR == 9 / 5, "CELSIUS_TO_FAHRENHEIT_FACTOR is not defined correctly."
+    if FAHRENHEIT_TO_CELSIUS_FACTOR != 5 / 9:
+        raise ValueError("FAHRENHEIT_TO_CELSIUS_FACTOR is not defined correctly.")
+    if CELSIUS_TO_FAHRENHEIT_FACTOR != 9 / 5:
+        raise ValueError("CELSIUS_TO_FAHRENHEIT_FACTOR is not defined correctly.")
     print("Global conversion factors are defined correctly.")
 
 def convert_to_celsius(fahrenheit):
