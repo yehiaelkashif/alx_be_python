@@ -1,23 +1,15 @@
-
-
-def perform_operation( num1, num2, operation):
-    match operation :
- 
-     case "add":
-        add= num1 +num2
-        return  add
-     case "subtract":
-        sub= num1-num2
-        return sub
-    
-     case "multiply":
-        mult=num1 * num2
-        return mult
-     case "divide":
+def perform_operation(num1, num2, operation):
+    if operation == 'add':
+        return num1 + num2
+    elif operation == 'subtract':
+        return num1 - num2
+    elif operation == 'multiply':
+        return num1 * num2
+    elif operation == 'divide':
         if num2 == 0:
-            print("Cannot divide by zero.")
-        else:
-            div=num1/num2
-            return div
-        
-        
+            return "Error: Division by zero is not allowed."
+        return num1 / num2
+    else:
+        return "Error: Invalid operation."
+    
+   
