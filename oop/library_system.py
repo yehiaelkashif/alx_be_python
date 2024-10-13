@@ -7,18 +7,20 @@ class Book:
         self.author = author
 
     def __str__(self):
-        return f"'{self.title}' by {self.author}"
+        # Modify the string to include the word "Book"
+        return f"Book: {self.title} by {self.author}"
 
 # Derived class for EBook
 class EBook(Book):
     def __init__(self, title, author, file_size):
         # Call the base class constructor
         super().__init__(title, author)
-        # Additional attribute specific to EBook
+        # Store file size in KB as per requirement
         self.file_size = file_size
 
     def __str__(self):
-        return f"{super().__str__()} (EBook - {self.file_size}MB)"
+        # Modify the string to include the word "EBook" and file size in KB
+        return f"EBook: {self.title} by {self.author}, File Size: {self.file_size}KB"
 
 # Derived class for PrintBook
 class PrintBook(Book):
@@ -29,7 +31,8 @@ class PrintBook(Book):
         self.page_count = page_count
 
     def __str__(self):
-        return f"{super().__str__()} (PrintBook - {self.page_count} pages)"
+        # Modify the string to include the word "PrintBook" and page count
+        return f"PrintBook: {self.title} by {self.author}, Page Count: {self.page_count}"
 
 # Library class to demonstrate composition
 class Library:
@@ -48,6 +51,5 @@ class Library:
             print("Books in the library:")
             for book in self.books:
                 print(book)
-
 
 
